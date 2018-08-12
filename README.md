@@ -1,25 +1,18 @@
-# ReduxSimpleStarter
+# Weather Application
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Divided the whole application in following components
+  - Search Component (Class component)
+  - Weather List Component (Class component)
+  - Chart (functional component)
+  - Google Map (Class component)
+  
+Search component makes an API request using action and the data is returned in json format.
+The latitude/longitude provided in the fetched data is used to create a google map and attach it to a div using ref.
+The data fetched such temperature, pressure, humidity are converted to graphs more readable and understandable format using SparkLines from 'react-sparkline'.
+The data is completely maintained using redux store.
 
-### Getting Started
-
-There are two methods for getting started with this repo.
-
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+# Major libraries/packages used
+1) axios -> Making http request
+2) lodash -> Transform data
+3) react, react-dom, react-redux, redux, redux-promise
+4) react-sparklines -> For creating charts
